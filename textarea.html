@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head lang="fr">
+    <meta charset="UTF-8">
+    <title>bluRedactor</title>
+    <link rel="stylesheet" href="assets/css/libs/normalize.css"/>
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/libs/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/bluRedactor.css"/>
+    <link rel="stylesheet" href="assets/css/bluTooltip.css"/>
+    <style>
+        body {
+            font-family: "Open Sans", serif;
+            font-size: 14px;
+        }
+        .container {
+            width: 900px;
+            margin: 20px auto;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <textarea name="" id="textarea" cols="30" rows="10">
+        <h2>Hello and Welcome</h2>
+			<p>Lorem ipsum <a href="http://test.com" title="dolor">dolor</a> sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing <b>elit, sed do eiusmod tempor incididunt</b> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </textarea>
+    <textarea name="" id="" cols="30" rows="10">erer</textarea>
+
+</div>
+
+<script type="text/html" id="media_template">
+    <div id="media-selector" data-menu="insert-media" class="container-fluid">
+        <div class="row ">
+            <ul class="col-md-2 col-sm-3 col-xs-4" id="media-selector-menu">
+                <li class="active"><a href="javascript:;" data-menu="insert-media">Insérer un média</a></li>
+                <li><a href="javascript:;" data-menu="insert-gallery">Créer une gallerie</a></li>
+            </ul>
+            <div id="media-selector-body" class="col-md-10 col-sm-9 col-xs-8">
+                <div class="row ">
+                    <div class="col-md-12 pd-10">
+                        <div class="media-library min-h-300">
+
+                            <div class="media-toolbar clearfix">
+                                <div class="media-toolbar-secondary pull-left">
+                                    <button class="btn">Ajouter des fichiers</button>
+                                    <select class="attachment-filters">
+                                        <option value="">Tous les médias</option>
+                                        <option value="">Mis en ligne sur cette article</option>
+                                        <option value="">images</option>
+                                        <option value="">Sons</option>
+                                        <option value="">Videos</option>
+                                        <option value="">Non-joint</option>
+                                    </select>
+                                    <select name="" id="" class="attachment-filters">
+                                        <option value="">Toutes les dates</option>
+                                        <option value="">août 2015</option>
+                                    </select>
+                                </div>
+                                <div class="media-toolbar-primary pull-right">
+                                    <input type="text" placeholder="Rechercher..." class="form-control">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 max-h-440 overflowed">
+                                    <ul class="media-list">
+                                        <li class="landscape"><a href="javascript:;"><img src="../assets/img/cervin.gif" alt=""></a></li>
+                                        <li class="landscape"><a href="javascript:;"><img src="../assets/img/cervin.gif" alt=""></a></li>
+                                        <li class="landscape"><a href="javascript:;"><img src="../assets/img/cervin.gif" alt=""></a></li>
+                                        <li class="landscape"><a href="javascript:;"><img src="../assets/img/cervin.gif" alt=""></a></li>
+                                        <li class="landscape"><a href="javascript:;"><img src="../assets/img/cervin.gif" alt=""></a></li>
+                                        <li class="landscape"><a href="javascript:;"><img src="../assets/img/cervin.gif" alt=""></a></li>
+                                        <li class="landscape"><a href="javascript:;"><img src="../assets/img/cervin.gif" alt=""></a></li>
+                                        <li class="landscape"><a href="javascript:;"><img src="../assets/img/cervin.gif" alt=""></a></li>
+                                        <li class="landscape"><a href="javascript:;"><img src="../assets/img/cervin.gif" alt=""></a></li>
+                                        <li class="landscape"><a href="javascript:;"><img src="../assets/img/cervin.gif" alt=""></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 max-h-440 overflowed bordered-left">
+                                    <div class="media-uploader-status hide">
+                                        <h3 class="title">Mise en ligne</h3>
+                                        <div class="row">
+                                            <div class="col-xs-10">
+                                                <div class="progress">
+                                                    <div class="bar" style="width: 25%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <span>25%</span>
+                                            </div>
+                                        </div>
+                                        <div class="upload-details pd-10">
+                                                <span class="upload-count">
+                                                    <span class="upload-index">1</span> / <span class="upload-total">1</span>
+                                                </span>
+                                            <hr>
+                                            <span class="upload-filename">hurjo.jpg</span>
+                                        </div>
+                                    </div>
+                                    <div class="attachment-details">
+                                        <h3 class="title">Détails du fichier</h3>
+                                        <div class="attachment-info">
+                                            <div class="thumbnail">
+                                                <img src="../assets/img/cervin.gif" alt="">
+                                            </div>
+                                            <div class="details">
+                                                <div class="filename">hurlo.jpg</div>
+                                                <div class="uploaded">novembre 6, 2015</div>
+                                                <div class="file-size">250 kb</div>
+                                                <div class="dimensions">3000 × 1200</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="bluRedactor_modal_footer clearfix">
+            <button class="action btn pull-right" type="button" disabled>Inserer dans l'article</button>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="anchor_template">
+    <div id="link-selector">
+        <div id="link-selector-body">
+            <p class="howto">Saisissez l'adresse de destination</p>
+            <div>
+                <label>
+                    <span>Adresse web</span>
+                    <input type="text" id="bluRedactor_link_url" placeholder="http://"/>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span>Texte du lien</span>
+                    <input type="text" id="bluRedactor_link_text"/>
+                </label>
+                <label class="checkbox">
+                    <span>Ouvrir le lien dans un nouvel onglet</span>
+                    <input type="checkbox" id="bluRedactor_link_blank_target" value="on"/>
+                </label>
+            </div>
+            <p class="howto">
+                <a href="#" id="bluRedactor_link_search_panel_toggle">Ou faites un lien vers un article du site</a>
+            </p>
+            <div id="bluRedactor_link_search_panel" class="collapsible">
+                <div>
+                    <label>
+                        <input type="text" id="search_panel_input" placeholder="Rechercher par titre, tag ou catégorie..."/>
+                    </label>
+                    <p class="tip"><i></i></p>
+                </div>
+                <ul id="search_panel_items">
+                    <li>
+                        <input type="hidden"/>
+                        <span class="item_title">About</span>
+
+                        <div class="item_meta">
+                            <span class="item_timeago">Il y a quelques instants</span>
+                            <span class="item_tags"><i class="fa fa-tags"></i> about, site</span>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="hidden"/>
+                        <span class="item_title">Bienvenue sur le site web ESGIS Gabon</span>
+
+                        <div class="item_meta">
+                            <span class="item_timeago">Il y a quelques instants</span>
+                            <span class="item_tags"><i class="fa fa-tags"></i> bienvenue, esgis, gabon, demarrage</span>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="hidden"/>
+                        <span class="item_title">Bienvenue sur le site web ESGIS Gabon</span>
+
+                        <div class="item_meta">
+                            <span class="item_timeago">Il y a 2 jours</span>
+                            <span class="item_tags"><i class="fa fa-tags"></i> bienvenue, esgis, gabon, demarrage</span>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="hidden"/>
+                        <span class="item_title">Bienvenue sur le site web ESGIS Gabon</span>
+
+                        <div class="item_meta">
+                            <span class="item_timeago">Il y a quelques instants</span>
+                            <span class="item_tags"><i class="fa fa-tags"></i> bienvenue, esgis, gabon, demarrage</span>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="hidden"/>
+                        <span class="item_title">Bienvenue sur le site web ESGIS Gabon</span>
+
+                        <div class="item_meta">
+                            <span class="item_timeago">Il y a quelques instants</span>
+                            <span class="item_tags"><i class="fa fa-tags"></i> bienvenue, esgis, gabon, demarrage</span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="result">
+                    <span class="result-message">4 résultats trouvés</span>
+                    <span class="tip"><i class="fa fa-info-circle"></i> Défilez pour afficher tout le contenu <i class="fa fa-hand-pointer-o"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="bluRedactor_modal_footer">
+            <button class="cancel" type="button">Annuler</button>
+            <button class="action" type="button" disabled>Ajouter un lien</button>
+        </div>
+    </div>
+</script>
+<script src="assets/js/libs/jquery-1.11.2.min.js"></script>
+<script src="assets/js/bluRedactor-0.1.1.js"></script>
+<script src="assets/js/bluTooltip-0.1.js"></script>
+<script src="assets/js/libs/tooltipsy.min.js"></script>
+<script>
+    $("textarea").bluRedactor();
+    $("ul.bluRedactor_toolbar").find('button[title]').tooltipsy({
+        offset: [0, 6],
+        className: "tooltip"
+    });
+</script>
+</body>
+</html>
